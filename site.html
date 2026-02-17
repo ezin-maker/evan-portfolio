@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evan Zinzi | Game Designer</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background-color: #ffffff;
+        color: #111;
+        line-height: 1.6;
+    }
+
+    header {
+        padding: 80px 20px;
+        text-align: center;
+        background: #f5f5f5;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 3rem;
+    }
+
+    h2 {
+        margin-top: 60px;
+        font-size: 2rem;
+    }
+
+    p {
+        max-width: 700px;
+        margin: 20px auto;
+        font-size: 1.1rem;
+    }
+
+    section {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .project-card {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 30px;
+        border: 1px solid #eee;
+        border-radius: 10px;
+        transition: 0.3s ease;
+        text-align: left;
+    }
+
+    .project-card:hover {
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    img {
+        max-width: 100%;
+        border-radius: 8px;
+        margin-top: 20px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 40px;
+        background: #f5f5f5;
+        margin-top: 60px;
+        font-size: 0.9rem;
+    }
+
+    .button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 24px;
+        background: #111;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: 0.3s ease;
+    }
+
+    .button:hover {
+        background: #333;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Evan Zinzi</h1>
+    <p>Aspiring Game Designer focused on strategic systems, player onboarding, and layered mechanics.</p>
+    <a href="#projects" class="button">View Projects</a>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I design game systems centered around clarity, strategic depth, and player experience.
+        My work explores how mechanics shape decision-making and how onboarding impacts engagement.
+        I am currently studying Game Studies at the University of Delaware.
+    </p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+        <h3>Ultimate Tic-Tac-Toe – Paper Prototype</h3>
+
+        <p>
+            <strong>Project Overview:</strong><br>
+            This paper prototype explores Ultimate Tic-Tac-Toe, a layered two-player strategy game
+            built around a grid of smaller grids. The objective is to win three mini-boards in a row
+            on a larger meta-board, creating multi-level strategic decision-making.
+        </p>
+
+        <img src="tic.png" alt="Ultimate Tic Tac Toe Paper Prototype">
+
+        <p>
+            <strong>Design Goal:</strong><br>
+            Increase the strategic depth of traditional Tic-Tac-Toe while keeping the rules
+            understandable for first-time players. The system needed to function entirely without code.
+        </p>
+
+        <p>
+            <strong>Core Mechanic:</strong><br>
+            Each move determines the opponent’s next board location. This forced board placement
+            creates two layers of strategic planning: players must think about winning the current
+            mini-board while also controlling their opponent’s next move.
+        </p>
+
+        <p>
+            <strong>Constraints:</strong><br>
+            • No digital rule enforcement<br>
+            • Rules had to be clearly communicated through layout and explanation<br>
+            • The board design needed to visually communicate the layered structure<br>
+            • The system had to be fully playable as a paper prototype
+        </p>
+
+        <p>
+            <strong>Playtesting Insights:</strong><br>
+            During testing, players initially needed clarification on the forced placement rule.
+            Once understood, they appreciated the added strategic complexity compared to standard Tic-Tac-Toe.
+            This reinforced the importance of onboarding and rule communication,
+            similar to how video games introduce mechanics through tutorial levels.
+        </p>
+
+        <p>
+            <strong>Iteration Concept:</strong><br>
+            A future iteration would expand the main grid from 9x9 to 18x18, increasing the
+            number of possible moves and encouraging deeper long-term planning.
+            This would preserve the core mechanic while significantly increasing strategic depth.
+        </p>
+
+        <p>
+            <strong>Reflection:</strong><br>
+            This project demonstrated that strong mechanics rely on clarity.
+            Even well-designed systems can fail if players do not immediately understand
+            how their decisions shape future outcomes.
+        </p>
+
+    </div>
+
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: ezinzi@gmail.com</p>
+</section>
+
+<footer>
+    © 2026 Evan Zinzi | Game Design Portfolio
+</footer>
+
+</body>
+</html>
