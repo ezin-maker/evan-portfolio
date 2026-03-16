@@ -8,10 +8,10 @@
 <style>
     body {
         margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        font-family: "Segoe UI", Arial, Helvetica, sans-serif;
         background-color: #ffffff;
         color: #111;
-        line-height: 1.6;
+        line-height: 1.7;
     }
 
     header {
@@ -28,6 +28,11 @@
     h2 {
         margin-top: 60px;
         font-size: 2rem;
+    }
+
+    h3 {
+        margin-top: 40px;
+        font-size: 1.6rem;
     }
 
     p {
@@ -83,6 +88,13 @@
     .button:hover {
         background: #333;
     }
+
+    ul {
+        max-width: 700px;
+        margin: 10px auto 20px auto;
+        text-align: left;
+        padding-left: 20px;
+    }
 </style>
 </head>
 
@@ -128,18 +140,20 @@
             mini-board while also controlling their opponent’s next move.
         </p>
         <p>
-            <strong>Constraints:</strong><br>
-            • No digital rule enforcement<br>
-            • Rules had to be clearly communicated through layout and explanation<br>
-            • The board design needed to visually communicate the layered structure<br>
-            • The system had to be fully playable as a paper prototype
+            <strong>Constraints:</strong>
         </p>
+        <ul>
+            <li>No digital rule enforcement</li>
+            <li>Rules had to be clearly communicated through layout and explanation</li>
+            <li>The board design needed to visually communicate the layered structure</li>
+            <li>The system had to be fully playable as a paper prototype</li>
+        </ul>
         <p>
             <strong>Playtesting Insights:</strong><br>
-            During testing, players initially needed clarification on the forced placement rule.
+            Playtesting was conducted with classmates who played multiple rounds and provided feedback on mechanics, pacing, and clarity of the rules.
+            Players initially needed clarification on the forced placement rule.
             Once understood, they appreciated the added strategic complexity compared to standard Tic-Tac-Toe.
-            This reinforced the importance of onboarding and rule communication,
-            similar to how video games introduce mechanics through tutorial levels.
+            This reinforced the importance of onboarding and rule communication.
         </p>
         <p>
             <strong>Iteration Concept:</strong><br>
@@ -158,13 +172,26 @@
     <!-- Stranger Things card -->
     <div class="project-card">
         <h3>Stranger Things: Escape Hawkins – Board Game</h3>
+
         <p>
             <strong>Overview of the Game:</strong><br>
             Players take on the roles of the kids of Hawkins: Will, Mike, Dustin, and Lucas, who are trapped in the Upside Down.
-            The goal is to reach the center “Welcome to Hawkins” sign while avoiding the Demogorgon. Players collect power-ups to gain strategic advantages.  
-            <br><strong>Game Designer:</strong> Evan Zinzi<br>
-            <strong>Constraints:</strong> Short, fast-paced board game; combine movement, chance, strategy; reflect the Stranger Things theme.<br>
-            <strong>Tools Used:</strong> Google Slides (board prototype), Google Docs (rules), dice, tokens.
+            The goal is to reach the center “Welcome to Hawkins” sign while avoiding the Demogorgon. Players collect power-ups
+            to gain strategic advantages.
+        </p>
+
+        <p>
+            <strong>Game Designer:</strong> Evan Zinzi
+        </p>
+
+        <p>
+            <strong>Constraints:</strong><br>
+            Short, fast-paced board game; combine movement, chance, and strategy; reflect the Stranger Things theme.
+        </p>
+
+        <p>
+            <strong>Tools Used:</strong><br>
+            Google Slides (board prototype), Google Docs (rules), dice, tokens.
         </p>
 
         <figure>
@@ -172,11 +199,10 @@
             <figcaption>Full game board layout showing all power-ups</figcaption>
         </figure>
 
-        <!-- FAN GAME DISCLAIMER -->
         <p style="font-size:0.9rem; color:#555;">
-        This project is a non-commercial fan game created for educational purposes.
-        Stranger Things and all related characters, settings, and trademarks are the
-        property of Netflix. All rights belong to their respective owners.
+            This project is a non-commercial fan game created for educational purposes.
+            Stranger Things and all related characters, settings, and trademarks are the
+            property of Netflix. All rights belong to their respective owners.
         </p>
 
         <p>
@@ -201,13 +227,14 @@
             Add a branching path allowing players to choose between a safer, longer route or a riskier, shorter path closer to the Demogorgon.
             This increases meaningful strategic choices and enhances the tension-reward dynamic without slowing down gameplay.
         </p>
+
     </div>
 
 </section>
 
 <section id="contact">
     <h2>Contact</h2>
-    <p>Email: ezinzi@gmail.com</p>
+    <p>Email: <a href="mailto:ezinzi@gmail.com">ezinzi@gmail.com</a></p>
 </section>
 
 <footer>
