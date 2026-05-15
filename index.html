@@ -10,14 +10,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+    /* Premium Dark Theme Palette */
     :root {
-        --bg-dark: #0f111a;
-        --bg-card: #161925;
-        --text-main: #f3f4f6;
-        --text-muted: #9ca3af;
-        --accent: #7c3aed;
-        --accent-hover: #9061f9;
-        --border: #23283d;
+        --bg-dark: #0b0f19;         /* Deep, clean midnight black/blue */
+        --bg-card: #111827;         /* Slightly lighter obsidian for cards */
+        --text-main: #f9fafb;       /* Bright off-white for primary text */
+        --text-muted: #9ca3af;      /* Clean gray for secondary text */
+        --accent: #3b82f6;          /* Vibrant blue for accents */
+        --border: #1f2937;          /* Subtle dark border line */
+        --header-gradient: radial-gradient(circle at top, #1e293b 0%, #0b0f19 70%);
+        --logo-color: #f9fafb;
+        --nav-bg: rgba(11, 15, 25, 0.9);
+        --footer-bg: #090d16;
+        /* Vivid Purple Menu Hover */
+        --nav-hover-purple: #a78bfa;
     }
 
     * {
@@ -42,7 +48,7 @@
     nav {
         position: sticky;
         top: 0;
-        background: rgba(15, 17, 26, 0.9);
+        background: var(--nav-bg);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         border-bottom: 1px solid var(--border);
@@ -56,9 +62,15 @@
     nav .logo {
         font-weight: 700;
         font-size: 1.2rem;
-        color: #ffffff;
+        color: var(--logo-color);
         text-decoration: none;
         letter-spacing: -0.02em;
+    }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 28px;
     }
 
     nav .nav-links {
@@ -74,8 +86,9 @@
         transition: color 0.2s ease;
     }
 
+    /* Purple menu hover */
     nav .nav-links a:hover {
-        color: #ffffff;
+        color: var(--nav-hover-purple);
     }
 
     /* Header Styling */
@@ -84,7 +97,7 @@
         width: 100%;
         padding: 100px 20px 60px 20px;
         text-align: center;
-        background: radial-gradient(circle at top, #1e1b4b 0%, var(--bg-dark) 70%);
+        background: var(--header-gradient);
         border-bottom: 1px solid var(--border);
     }
 
@@ -93,38 +106,22 @@
         font-size: 3.5rem;
         font-weight: 700;
         letter-spacing: -0.03em;
-        color: #ffffff;
+        color: var(--text-main);
     }
 
     header p {
         max-width: 650px;
-        margin: 20px auto 30px auto;
+        margin: 20px auto 0 auto;
         font-size: 1.2rem;
         color: var(--text-muted);
         font-weight: 300;
-    }
-
-    /* Button Layout */
-    .button {
-        display: inline-block;
-        padding: 12px 28px;
-        background: var(--accent);
-        color: #fff;
-        text-decoration: none;
-        border-radius: 6px;
-        font-weight: 500;
-        transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .button:hover {
-        background: var(--accent-hover);
     }
 
     /* Strict Single Column Section Wrapper */
     section {
         display: block;
         width: 100%;
-        max-width: 800px; /* Locked down maximum readable block width */
+        max-width: 800px; 
         margin: 0 auto;
         padding: 80px 20px;
         float: none;
@@ -150,7 +147,7 @@
         text-align: center;
         margin-top: 0;
         margin-bottom: 40px;
-        color: #ffffff;
+        color: var(--text-main);
     }
 
     /* Strict Block-Level Project Document Flow */
@@ -168,9 +165,10 @@
     @media (max-width: 900px) {
         h1 { font-size: 2.8rem; }
         nav { padding: 15px 20px; }
+        .nav-right { gap: 15px; }
     }
 
-    /* Project Cards - Rigid Full-Width Structural Flow */
+    /* Project Cards */
     .project-card {
         display: block;
         width: 100%;
@@ -181,21 +179,21 @@
         padding: 40px;
         border-radius: 12px;
         margin-top: 0;
-        margin-bottom: 50px; /* Explicit structural gap between stacked items */
+        margin-bottom: 50px; 
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         text-align: left;
     }
 
     .project-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
     }
 
     .project-card h3 {
         margin-top: 0;
         margin-bottom: 20px;
         font-size: 1.5rem;
-        color: #ffffff;
+        color: var(--text-main);
         border-bottom: 1px solid var(--border);
         padding-bottom: 10px;
     }
@@ -207,7 +205,7 @@
     }
 
     .project-card strong {
-        color: #ffffff;
+        color: var(--text-main);
     }
 
     /* Lists inside Cards */
@@ -222,16 +220,25 @@
         font-size: 0.95rem;
     }
 
-    /* Images and Figures */
+    /* CRITICAL FIX: Pure white protective background wrapper. 
+       This guarantees the dark image mockups with black text remain 100% legible.
+    */
+    .img-container {
+        display: block;
+        width: 100%;
+        background: #ffffff;
+        padding: 16px;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        margin: 20px 0;
+    }
+
     img {
         display: block;
         width: 100%;
         max-width: 100%;
         height: auto;
-        border-radius: 8px;
-        border: 1px solid var(--border);
-        margin-top: 15px;
-        margin-bottom: 15px;
+        border-radius: 4px;
     }
 
     figure {
@@ -240,15 +247,15 @@
         width: 100%;
     }
 
-    figure img {
-        margin-top: 0;
-        margin-bottom: 5px;
+    figure .img-container {
+        margin: 0 0 8px 0;
     }
 
     figcaption {
         display: block;
         font-size: 0.85rem;
-        color: #6b7280;
+        color: var(--text-muted);
+        opacity: 0.8;
         line-height: 1.4;
     }
 
@@ -273,7 +280,6 @@
     }
 
     #contact a:hover {
-        color: var(--accent-hover);
         text-decoration: underline;
     }
 
@@ -284,9 +290,10 @@
         text-align: center;
         padding: 40px;
         border-top: 1px solid var(--border);
-        color: #4b5563;
+        color: var(--text-muted);
+        opacity: 0.7;
         font-size: 0.9rem;
-        background: #0b0d14;
+        background: var(--footer-bg);
     }
 </style>
 </head>
@@ -295,17 +302,18 @@
 
 <nav>
     <a href="#" class="logo">EZ</a>
-    <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+    <div class="nav-right">
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
     </div>
 </nav>
 
 <header>
     <h1>Evan Zinzi</h1>
     <p>Aspiring Game Designer focused on strategic systems, player onboarding, and layered mechanics.</p>
-    <a href="#projects" class="button">View Projects</a>
 </header>
 
 <section id="about">
@@ -328,7 +336,9 @@
         built around a grid of smaller grids. The objective is to win three mini-boards in a row
         on a larger meta-board, creating multi-level strategic decision-making.</p>
 
-        <img src="tic.png" alt="Ultimate Tic Tac Toe Paper Prototype">
+        <div class="img-container">
+            <img src="tic.png" alt="Ultimate Tic Tac Toe Paper Prototype">
+        </div>
 
         <p><strong>Design Goal:</strong><br>
         Increase the strategic depth of traditional Tic-Tac-Toe while keeping the rules
@@ -380,11 +390,13 @@
         Google Slides (board prototype), Google Docs (rules), dice, tokens.</p>
 
         <figure>
-            <img src="escape_board_image.png" alt="Stranger Things: Escape Hawkins Full Board">
+            <div class="img-container">
+                <img src="escape_board_image.png" alt="Stranger Things: Escape Hawkins Full Board">
+            </div>
             <figcaption>Full game board layout showing all power-ups</figcaption>
         </figure>
 
-        <p style="font-size:0.9rem; color:#555;">
+        <p style="font-size:0.9rem; color:#9ca3af;">
             This project is a non-commercial fan game created for educational purposes.
             Stranger Things and all related characters, settings, and trademarks are the
             property of Netflix. All rights belong to their respective owners.
@@ -419,12 +431,16 @@
         Piper: Tides of Courage is a party board game where players take on the role of shorebirds collecting shells along a dynamic shoreline. Players must decide how far to risk moving toward the water for higher-value shells while avoiding waves that can reset their progress. The goal is to reach 15 points first.</p>
 
         <figure>
-            <img src="piper.png" alt="Piper Tides of Courage Board">
+            <div class="img-container">
+                <img src="piper.png" alt="Piper Tides of Courage Board">
+            </div>
             <figcaption>Physical paper prototype showing board layout, movement system, and shell placement used during playtesting.</figcaption>
         </figure>
 
         <figure>
-            <img src="piper2.png" alt="Piper digital prototype image">
+            <div class="img-container">
+                <img src="piper2.png" alt="Piper digital prototype image">
+            </div>
             <figcaption>Digital prototype created in Canva showing waves, player pieces, and shell distribution used to test gameplay systems.</figcaption>
         </figure>
 
@@ -462,16 +478,20 @@
         Morpho-Headz is a deduction-based plant morphology game where players identify hidden plant species by asking structured yes-or-no questions about structural traits. Players must analyze leaf shape, arrangement, stem type, and other morphological features to correctly deduce their assigned plant.</p>
 
         <figure>
-            <img src="morpho1.png" alt="Morpho-Headz card prototype in Google Slides">
+            <div class="img-container">
+                <img src="morpho1.png" alt="Morpho-Headz card prototype in Google Slides">
+            </div>
             <figcaption>Google Slides prototype showing plant cards used during gameplay testing.</figcaption>
         </figure>
 
         <figure>
-            <img src="morpho2.png" alt="Morpho-Headz visual field guide">
+            <div class="img-container">
+                <img src="morpho2.png" alt="Morpho-Headz visual field guide">
+            </div>
             <figcaption>
                 Visual field guide used to help players interpret morphological traits during deduction.
                 <br>
-                <span style="font-size: 0.85rem; color: #666;">
+                <span style="font-size: 0.85rem; color: #9ca3af;">
                     Disclaimer: Base diagram adapted from Wikipedia botanical illustration references and modified for educational gameplay use.
                 </span>
             </figcaption>
