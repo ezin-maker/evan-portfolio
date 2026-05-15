@@ -3,26 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Evan Zinzi | Game Designer</title>
+<title>Evan Zinzi | Game Designer Portfolio</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-    /* Premium Dark Theme Palette */
+    /* Premium All-Black Theme Palette */
     :root {
-        --bg-dark: #0b0f19;         /* Deep, clean midnight black/blue */
-        --bg-card: #111827;         /* Slightly lighter obsidian for cards */
-        --text-main: #f9fafb;       /* Bright off-white for primary text */
-        --text-muted: #9ca3af;      /* Clean gray for secondary text */
-        --accent: #3b82f6;          /* Vibrant blue for accents */
-        --border: #1f2937;          /* Subtle dark border line */
-        --header-gradient: radial-gradient(circle at top, #1e293b 0%, #0b0f19 70%);
-        --logo-color: #f9fafb;
-        --nav-bg: rgba(11, 15, 25, 0.9);
-        --footer-bg: #090d16;
-        /* Vivid Purple Menu Hover */
+        --bg-dark: #05070f;         /* Clean midnight background */
+        --bg-card: #0f1322;         /* Slightly lighter crisp gray-black for cards */
+        --text-main: #f8fafc;       /* Bright white for high contrast */
+        --text-muted: #94a3b8;      /* Soft slate gray for standard paragraphs */
+        --accent: #3b82f6;          /* Deep blue accent color */
+        --border: #1e293b;          /* Clean design borders */
+        --header-gradient: radial-gradient(circle at top, #111625 0%, #05070f 70%);
+        --logo-color: #f8fafc;
+        --nav-bg: rgba(5, 7, 15, 0.9);
+        --footer-bg: #020307;
+        /* Vivid Purple Menu Hover Link Color */
         --nav-hover-purple: #a78bfa;
     }
 
@@ -44,7 +44,7 @@
         display: block;
     }
 
-    /* Sticky Navigation Bar */
+    /* Sticky Navigation Bar - High Accessibility Layout */
     nav {
         position: sticky;
         top: 0;
@@ -75,7 +75,7 @@
 
     nav .nav-links {
         display: flex;
-        gap: 28px;
+        gap: 24px;
     }
 
     nav .nav-links a {
@@ -86,16 +86,16 @@
         transition: color 0.2s ease;
     }
 
-    /* Purple menu hover */
+    /* Interactive Menu Hover States */
     nav .nav-links a:hover {
         color: var(--nav-hover-purple);
     }
 
-    /* Header Styling */
+    /* Header Presentation Hero Box */
     header {
         display: block;
         width: 100%;
-        padding: 100px 20px 60px 20px;
+        padding: 120px 20px 80px 20px;
         text-align: center;
         background: var(--header-gradient);
         border-bottom: 1px solid var(--border);
@@ -103,25 +103,25 @@
 
     h1 {
         margin: 0;
-        font-size: 3.5rem;
+        font-size: 3.6rem;
         font-weight: 700;
         letter-spacing: -0.03em;
         color: var(--text-main);
     }
 
     header p {
-        max-width: 650px;
+        max-width: 700px;
         margin: 20px auto 0 auto;
-        font-size: 1.2rem;
+        font-size: 1.25rem;
         color: var(--text-muted);
         font-weight: 300;
     }
 
-    /* Strict Single Column Section Wrapper */
+    /* Strict Block-Level Document Flow Containers */
     section {
         display: block;
         width: 100%;
-        max-width: 800px; 
+        max-width: 840px; 
         margin: 0 auto;
         padding: 80px 20px;
         float: none;
@@ -134,11 +134,13 @@
     }
 
     #about p {
-        max-width: 100%;
-        margin: 0 auto;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         color: var(--text-muted);
-        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #about strong {
+        color: var(--text-main);
     }
 
     h2 {
@@ -150,7 +152,6 @@
         color: var(--text-main);
     }
 
-    /* Strict Block-Level Project Document Flow */
     #projects {
         display: block; 
         scroll-margin-top: 80px;
@@ -159,16 +160,16 @@
     }
 
     #projects h2 {
-        margin-bottom: 40px;
+        margin-bottom: 50px;
     }
 
     @media (max-width: 900px) {
         h1 { font-size: 2.8rem; }
         nav { padding: 15px 20px; }
-        .nav-right { gap: 15px; }
+        nav .nav-links { gap: 15px; }
     }
 
-    /* Project Cards */
+    /* Project Cards Layout Elements */
     .project-card {
         display: block;
         width: 100%;
@@ -176,39 +177,40 @@
         clear: both;
         background: var(--bg-card);
         border: 1px solid var(--border);
-        padding: 40px;
+        padding: 45px;
         border-radius: 12px;
         margin-top: 0;
-        margin-bottom: 50px; 
+        margin-bottom: 60px; 
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         text-align: left;
+        scroll-margin-top: 100px;
     }
 
     .project-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        transform: translateY(-4px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
     }
 
     .project-card h3 {
         margin-top: 0;
-        margin-bottom: 20px;
-        font-size: 1.5rem;
-        color: var(--text-main);
+        margin-bottom: 25px;
+        font-size: 1.6rem;
+        color: #ffffff;
         border-bottom: 1px solid var(--border);
-        padding-bottom: 10px;
+        padding-bottom: 12px;
     }
 
     .project-card p {
         margin: 15px 0;
-        font-size: 1rem;
+        font-size: 1.05rem;
         color: var(--text-muted);
     }
 
     .project-card strong {
-        color: var(--text-main);
+        color: #ffffff;
     }
 
-    /* Lists inside Cards */
+    /* Card Data Lists */
     .project-card ul {
         margin: 15px 0;
         padding-left: 20px;
@@ -216,13 +218,11 @@
     }
 
     .project-card li {
-        margin-bottom: 8px;
-        font-size: 0.95rem;
+        margin-bottom: 10px;
+        font-size: 1rem;
     }
 
-    /* CRITICAL FIX: Pure white protective background wrapper. 
-       This guarantees the dark image mockups with black text remain 100% legible.
-    */
+    /* RUBRIC IMAGE READABILITY WRAPPER */
     .img-container {
         display: block;
         width: 100%;
@@ -230,7 +230,7 @@
         padding: 16px;
         border: 1px solid #e2e8f0;
         border-radius: 8px;
-        margin: 20px 0;
+        margin: 25px 0;
     }
 
     img {
@@ -242,7 +242,7 @@
     }
 
     figure {
-        margin: 20px 0;
+        margin: 25px 0;
         display: block;
         width: 100%;
     }
@@ -255,11 +255,12 @@
         display: block;
         font-size: 0.85rem;
         color: var(--text-muted);
-        opacity: 0.8;
+        opacity: 0.85;
         line-height: 1.4;
+        margin-top: 4px;
     }
 
-    /* Contact Section Layout */
+    /* Contact Details Base Styles */
     #contact {
         display: block;
         width: 100%;
@@ -305,7 +306,7 @@
     <div class="nav-right">
         <div class="nav-links">
             <a href="#about">About</a>
-            <a href="#projects">Projects</a>
+            <a href="#projects-header">Projects</a>
             <a href="#contact">Contact</a>
         </div>
     </div>
@@ -313,22 +314,29 @@
 
 <header>
     <h1>Evan Zinzi</h1>
-    <p>Aspiring Game Designer focused on strategic systems, player onboarding, and layered mechanics.</p>
+    <p>Game Designer focused on strategic systems, player onboarding, and layered mechanics.</p>
 </header>
 
 <section id="about">
     <h2>About Me</h2>
     <p>
-        I design game systems centered around clarity, strategic depth, and player experience.
-        My work explores how mechanics shape decision-making and how onboarding impacts engagement.
-        I am currently studying Game Studies at the University of Delaware.
+        I design deep tabletop and digital game systems centered around clarity, strategic weight, and complex player decision matrix mechanics. My design methodology emphasizes systemic balancing, onboarding accessibility paths, and analyzing how custom rulesets shape interaction. I am currently completing my Game Studies education at the University of Delaware.
+    </p>
+    <p>
+        Growing up in Coastal Delaware, my environmental background deeply rooted my design aesthetics in structured, interconnected patterns. Having taken specialized computer art and photography classes at Cape Henlopen High School, I learned early on how to break down complex visual environments into individual design layers. This foundation directly helps me approach game development from a distinct systems perspective—looking at how independent movement parameters, resource loops, and player action caps influence long-term tactical calculation. 
+    </p>
+    <p>
+        My background shapes my passion for analog and digital rapid prototyping, allowing me to distill highly technical, mathematical concepts into engaging player dynamics that feel intuitive from the very first turn.
+    </p>
+    <p>
+        <strong>Technical Skills & Tools:</strong> Mechanics Balancing, Rules Architecture Design, Paper Prototyping, Playtest Coordination & Analysis, Adobe Photoshop, Adobe Illustrator, Google Workspace, and Digital Layout Design.
     </p>
 </section>
 
 <section id="projects">
-    <h2>Projects</h2>
+    <h2 id="projects-header">Project Portfolio</h2>
 
-    <div class="project-card">
+    <div class="project-card" id="project-tic-tac-toe">
         <h3>Ultimate Tic-Tac-Toe – Paper Prototype</h3>
 
         <p><strong>Project Overview:</strong><br>
@@ -373,7 +381,7 @@
         how their decisions shape future outcomes.</p>
     </div>
 
-    <div class="project-card">
+    <div class="project-card" id="project-stranger-things">
         <h3>Stranger Things: Escape Hawkins – Board Game</h3>
 
         <p><strong>Overview of the Game:</strong><br>
@@ -396,7 +404,7 @@
             <figcaption>Full game board layout showing all power-ups</figcaption>
         </figure>
 
-        <p style="font-size:0.9rem; color:#9ca3af;">
+        <p style="font-size:0.9rem; color: var(--text-muted);">
             This project is a non-commercial fan game created for educational purposes.
             Stranger Things and all related characters, settings, and trademarks are the
             property of Netflix. All rights belong to their respective owners.
@@ -424,7 +432,7 @@
         This increases meaningful strategic choices and enhances the tension-reward dynamic without slowing down gameplay.</p>
     </div>
 
-    <div class="project-card">
+    <div class="project-card" id="project-piper">
         <h3>Piper: Tides of Courage – Board Game</h3>
 
         <p><strong>Overview of the Game:</strong><br>
@@ -471,7 +479,7 @@
         Add a tide prediction system that allows players to anticipate wave movement. This would improve strategic planning and reduce frustration from unpredictability.</p>
     </div>
 
-    <div class="project-card">
+    <div class="project-card" id="project-morpho-headz">
         <h3>Morpho-Headz – Plant Morphology Deduction Game</h3>
 
         <p><strong>Overview of the Game:</strong><br>
@@ -491,7 +499,7 @@
             <figcaption>
                 Visual field guide used to help players interpret morphological traits during deduction.
                 <br>
-                <span style="font-size: 0.85rem; color: #9ca3af;">
+                <span style="font-size: 0.85rem; color: var(--text-muted);">
                     Disclaimer: Base diagram adapted from Wikipedia botanical illustration references and modified for educational gameplay use.
                 </span>
             </figcaption>
